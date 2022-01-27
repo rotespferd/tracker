@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "serverless"
+		},
+		{
+			"path": "client"
+		}
+	],
+	"settings": {
+		"deno.lint": true,
+		"deno.unstable": false
+	}
+}

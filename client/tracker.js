@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let timestamp = Date.now();
-    let host = window.location.hostname;
-    let path = window.location.pathname;
-    let useragent = window.navigator.userAgent;
+    const timestamp = Date.now();
+    const host = window.location.hostname;
+    const path = window.location.pathname;
+    const useragent = window.navigator.userAgent;
 
-    let requestBody = {
+    const requestBody = {
         "timestamp": timestamp,
         "host": host,
         "path": path,
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fetch('http://localhost:9099', {
         method: 'POST',
-        body: requestBody,
+        body: JSON.stringify(requestBody),
         headers: {
             "Content-Type": "application/json"
         }
